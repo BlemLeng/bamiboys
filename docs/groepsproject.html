@@ -1,0 +1,1166 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>De hoofdoorzaak van luchtvervuiling: transport versus industrie &#8212; Jupyter Book Template</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/groepsproject';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Jupyter Book Tutorial" href="home.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="home.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Jupyter Book Template</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="home.html">
+                    Jupyter Book Tutorial
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">De hoofdoorzaak van luchtvervuiling: transport versus industrie</a></li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/BlemLeng/bamiboys/blob/main/docs/docs/groepsproject.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/BlemLeng/bamiboys" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/BlemLeng/bamiboys/issues/new?title=Issue%20on%20page%20%2Fdocs/groepsproject.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/docs/groepsproject.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>De hoofdoorzaak van luchtvervuiling: transport versus industrie</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">De hoofdoorzaak van luchtvervuiling: transport versus industrie</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introductie">Introductie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-en-voorverwerking">Dataset en Voorverwerking</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#variabele-omschijvingen">Variabele omschijvingen.</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perspectief-1-industrie-is-de-hoofdoorzaak-van-luchtvervuiing">Perspectief 1: Industrie is de hoofdoorzaak van luchtvervuiing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#argument-1-wereldwijde-luchtvervuiling-concentraties-van-pm2-5-per-land">Argument 1: Wereldwijde Luchtvervuiling Concentraties van PM2.5 per Land</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#argument-2-relatie-tussen-industriele-activiteit-en-fijnstofconcentraties-pm2-5-in-de-lucht">Argument 2: Relatie Tussen Industriële Activiteit en Fijnstofconcentraties (PM2.5) in de Lucht</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#argument-3-vergelijking-van-export-import-en-luchtvervuiling-per-continent">Argument 3: Vergelijking van Export, Import en Luchtvervuiling per Continent</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perspectief-2-transport-is-de-hoofdoorzaak-van-luchtvervuiling">Perspectief 2: Transport is de hoofdoorzaak van luchtvervuiling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#argument-1-totale-broeikasgasuitstoot-per-sector-2018-2024-vergelijking-tussen-industrie-en-transport">Argument 1: Totale Broeikasgasuitstoot per Sector (2018-2024). Vergelijking Tussen Industrie en Transport</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#argument-2-relatie-tussen-verkeersvolume-en-co2-uitstoot">Argument 2: Relatie Tussen Verkeersvolume en CO2-uitstoot.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#argument-3-jaarlijkse-stijging-van-gemiddelde-co2-uitstoot-door-transport-wereldwijd">Argument 3: Jaarlijkse Stijging van Gemiddelde CO2-uitstoot door Transport Wereldwijd</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflectie">Reflectie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#werkverdeling">Werkverdeling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melvin">Melvin:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ceylan">Ceylan:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#froukje">Froukje:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#isa">Isa:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referenties">Referenties</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="de-hoofdoorzaak-van-luchtvervuiling-transport-versus-industrie">
+<h1>De hoofdoorzaak van luchtvervuiling: transport versus industrie<a class="headerlink" href="#de-hoofdoorzaak-van-luchtvervuiling-transport-versus-industrie" title="Link to this heading">#</a></h1>
+<p>Studenten: Melvin Dalhuisen 15261417, Ceylan Mas 15237974, Froukje Dijk 15262421 en Isa van de Hoef 14541912</p>
+<p>Team: E1</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load image from link</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;image1.jpg&#39;</span>
+
+<span class="c1"># Display image from URL with smaller size and subtitle</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">display</span>
+
+<span class="c1"># Set the desired image width and height</span>
+<span class="n">width</span> <span class="o">=</span> <span class="mi">600</span>
+<span class="n">height</span> <span class="o">=</span> <span class="mi">300</span>
+
+<span class="c1"># Set the subtitle text</span>
+<span class="n">subtitle</span> <span class="o">=</span> <span class="s2">&quot;© iStock&quot;</span>
+
+<span class="c1"># Create an Image instance with the URL</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">)</span>
+
+<span class="c1"># Display the image and subtitle</span>
+<span class="n">display</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">subtitle</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><img src="image1.jpg" width="600" height="300"/></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>© iStock
+</pre></div>
+</div>
+</div>
+</div>
+<section id="introductie">
+<h2>Introductie<a class="headerlink" href="#introductie" title="Link to this heading">#</a></h2>
+<p>Luchtvervuiling is een van de grootste milieuproblemen van onze tijd en heeft al decennialang de aandacht van wetenschappers, beleidsmakers en burgers. Hoewel luchtvervuiling in veel landen gereguleerd wordt door strenge milieuwetten, blijft het een hardnekkig probleem met verregaande gevolgen voor zowel het milieu als de volksgezondheid. Twee van de belangrijkste bronnen van luchtvervuiling zijn de industrie en het transport.</p>
+<p>Vanuit het perspectief van de industrie speelt de productie van goederen een cruciale rol in de uitstoot van schadelijke stoffen zoals koolstofdioxide, zwaveldioxide en fijnstof. Deze vervuilende stoffen worden uitgestoten door fabrieken, energiecentrales en andere industriële installaties. Ze dragen bij aan smog, verzuring van ecosystemen en klimaatverandering.</p>
+<p>Aan de andere kant veroorzaakt transport en verkeer een aanzienlijke hoeveelheid luchtvervuiling door de uitstoot van uitlaatgassen. Auto’s, vrachtwagens, bussen en andere vervoermiddelen zijn verantwoordelijk voor een groot deel van de stikstofoxiden en fijnstof in de atmosfeer.</p>
+</section>
+<section id="dataset-en-voorverwerking">
+<h2>Dataset en Voorverwerking<a class="headerlink" href="#dataset-en-voorverwerking" title="Link to this heading">#</a></h2>
+<p>Voor dit onderzoek hebben we gezocht naar datasets die informatie en gegevens bevatten over luchtvervuiling, transport, verkeer en industrie. Hieronder volgt een uitleg over de voorbewerking van de datasets.</p>
+<p>De gebruikte datasets komen van verschillende bronnen. We hebben bij veel datasets verschillende stappen genomen om deze te kunnen gebruiken in onze data analyse. Denk hierbij aan het droppen van onnodige kolommen en het sorteren op alleen recente jaartallen.</p>
+<p>Bij het samenvoegen van datasets waren de variabelenamen in sommige gevallen verschillend. Zo werd de variabele die de landen bevatte in de ene dataset aangeduid als ‘Location’ en in de andere dataset als ‘Countries’. Om deze datasets te kunnen samenvoegen op basis van de landvariabele, hebben we ervoor gezorgd dat deze kolommen eerst dezelfde naam kregen.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="variabele-omschijvingen">
+<h1>Variabele omschijvingen.<a class="headerlink" href="#variabele-omschijvingen" title="Link to this heading">#</a></h1>
+<p>Hieronder staat een lijst met de gebruikte variabelen uit de datasets tijdens deze analyse:</p>
+<ul class="simple">
+<li><p>FactValueNumeric (Deze variabele bevat een numerieke waarde die de concentratie PM2.5 aangeeft.): Ratio, Continu</p></li>
+<li><p>Location (Deze variabele bevat landen van de wereld.): Nominaal, Discreet</p></li>
+<li><p>Industry_Value: Ratio, Continu</p></li>
+<li><p>total_export_2019: Ratio, Discreet</p></li>
+<li><p>total_import_2019: Ratio, Discreet</p></li>
+<li><p>Continent: Nominaal, Disceet</p></li>
+<li><p>Greenhouse gas emissions from industry: Ratio, Continu</p></li>
+<li><p>Greenhouse gas emissions from transport: Ratio, Continu</p></li>
+<li><p>CO2 Emission Index: Ratio, Continu</p></li>
+<li><p>Traffic Index: Ordinaal, Discreet</p></li>
+<li><p>Carbon dioxide emissions from transport: Ratio, Continu</p></li>
+<li><p>Year: Interval, Discreet</p></li>
+</ul>
+<section id="perspectief-1-industrie-is-de-hoofdoorzaak-van-luchtvervuiing">
+<h2>Perspectief 1: Industrie is de hoofdoorzaak van luchtvervuiing<a class="headerlink" href="#perspectief-1-industrie-is-de-hoofdoorzaak-van-luchtvervuiing" title="Link to this heading">#</a></h2>
+<p>Industrie speelt een cruciale rol in de economie van een land, maar het is ook een van de grootste bronnen van luchtvervuiling. Industriële activiteiten zoals productie en energieopwekking leiden tot de uitstoot van schadelijke stoffen zoals koolstofdioxide (CO2), zwavelstofdioxide (SO2), stikstofoxiden (NOx) en fijnstof. Deze stoffen veroorzaken ernstige milieuproblemen zoals klimaatverandering, verzuring en smog.</p>
+<p>In veel landen, zoals China, heeft de snelle industriële groei geleid tot ernstige luchtvervuiling. Ondanks strenge emissienormen en maatregelen, zoals het sluiten van vervuilende fabrieken, blijft naleving en handhaving een uitdaging. Industriële faciliteiten bevinden zich vaak in stedelijke gebieden of nabij kwetsbare ecosystemen, waardoor de impact van luchtvervuiling nog groter is.</p>
+<section id="argument-1-wereldwijde-luchtvervuiling-concentraties-van-pm2-5-per-land">
+<h3>Argument 1: Wereldwijde Luchtvervuiling Concentraties van PM2.5 per Land<a class="headerlink" href="#argument-1-wereldwijde-luchtvervuiling-concentraties-van-pm2-5-per-land" title="Link to this heading">#</a></h3>
+<p>De onderstaande afbeelding toont een wereldkaart waarop de luchtvervuiling per land is weergegeven. De intensiteit van de kleuren geeft de concentratie fijnstof (PM2.5) in de lucht aan. Hoe donkerder de kleur, hoe hoger de concentratie PM2.5. PM2.5 verwijst naar deeltjes met een diameter van minder dan 2,5 micrometer, die schadelijk kunnen zijn voor de gezondheid. Landen met donkerdere groene tinten hebben hogere niveaus van fijnstof en dus meer vervuilde lucht. De legenda aan de rechterkant van de kaart geeft de specifieke concentratiecategorieën aan, variërend van lage (lichtgroen) tot hoge (donkergroen) concentraties PM2.5.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.colors</span> <span class="k">as</span> <span class="nn">mcolors</span>
+
+<span class="c1"># Lees het CSV-bestand</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data.csv&#39;</span><span class="p">)</span>
+
+<span class="c1"># Verwijder de kolommen die niet boeien</span>
+<span class="n">columns_to_drop</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;IsLatestYear&#39;</span><span class="p">,</span> <span class="s1">&#39;ValueType&#39;</span><span class="p">,</span> <span class="s1">&#39;Indicator&#39;</span><span class="p">,</span> <span class="s1">&#39;Location type&#39;</span><span class="p">,</span> <span class="s1">&#39;Dim1 type&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;Dim1ValueCode&#39;</span><span class="p">,</span> <span class="s1">&#39;Dim2 type&#39;</span><span class="p">,</span> <span class="s1">&#39;Dim2&#39;</span><span class="p">,</span> <span class="s1">&#39;Dim2ValueCode&#39;</span><span class="p">,</span> <span class="s1">&#39;Dim3ValueCode&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;Dim3 type&#39;</span><span class="p">,</span> <span class="s1">&#39;Dim3&#39;</span><span class="p">,</span> <span class="s1">&#39;DataSourceDimValueCode&#39;</span><span class="p">,</span> <span class="s1">&#39;DataSource&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;FactValueNumericPrefix&#39;</span><span class="p">,</span> <span class="s1">&#39;FactValueUoM&#39;</span><span class="p">,</span> <span class="s1">&#39;FactValueNumericLowPrefix&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;FactValueNumericHighPrefix&#39;</span><span class="p">,</span> <span class="s1">&#39;FactValueTranslationID&#39;</span><span class="p">,</span> <span class="s1">&#39;FactComments&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;Language&#39;</span><span class="p">,</span> <span class="s1">&#39;DateModified&#39;</span><span class="p">,</span> <span class="s1">&#39;IndicatorCode&#39;</span><span class="p">,</span> <span class="s1">&#39;Period type&#39;</span>
+<span class="p">]</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">columns_to_drop</span><span class="p">)</span>
+
+<span class="c1"># Filter de data</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Period&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2019</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Dim1&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Total&#39;</span><span class="p">)]</span>
+
+<span class="c1"># Maak een nieuwe kolom voor de groepen met stappen van 20</span>
+<span class="n">bins</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">19</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">bins</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;Group&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;FactValueNumeric&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Lees de wereldkaart shapefile</span>
+<span class="n">world</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">gpd</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="s1">&#39;naturalearth_lowres&#39;</span><span class="p">))</span>
+
+<span class="c1"># Merge de data met de wereldkaart</span>
+<span class="n">world</span> <span class="o">=</span> <span class="n">world</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;Location&#39;</span><span class="p">)</span>
+
+
+<span class="c1"># Definieer een colormap met grotere kleurverschillen</span>
+<span class="n">cmap</span> <span class="o">=</span> <span class="n">mcolors</span><span class="o">.</span><span class="n">LinearSegmentedColormap</span><span class="o">.</span><span class="n">from_list</span><span class="p">(</span><span class="s1">&#39;green_scale&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;#e0ffe0&#39;</span><span class="p">,</span> <span class="s1">&#39;#006400&#39;</span><span class="p">],</span> <span class="n">N</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">labels</span><span class="p">))</span>
+
+<span class="c1"># Plot de kaart</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">world</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">world</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;Group&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">,</span>
+           <span class="n">missing_kwds</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;lightgrey&quot;</span><span class="p">})</span>
+
+<span class="c1"># Verwijder de x- en y-assen</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
+
+<span class="c1"># Legenda toevoegen</span>
+<span class="n">legend</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_legend</span><span class="p">()</span>
+<span class="n">legend</span><span class="o">.</span><span class="n">set_bbox_to_anchor</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;PM2.5 concentratie per land&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<div><p><em>Figuur 1: Luchtvervuiling per land wereldwijd.</em></p>
+</div></blockquote>
+</section>
+<section id="argument-2-relatie-tussen-industriele-activiteit-en-fijnstofconcentraties-pm2-5-in-de-lucht">
+<h3>Argument 2: Relatie Tussen Industriële Activiteit en Fijnstofconcentraties (PM2.5) in de Lucht<a class="headerlink" href="#argument-2-relatie-tussen-industriele-activiteit-en-fijnstofconcentraties-pm2-5-in-de-lucht" title="Link to this heading">#</a></h3>
+<p>De onderstaande lijngrafiek illustreert de relatie tussen de hoeveelheid industriële activiteit en de concentratie fijnstof (PM2.5) in de lucht. Op de x-as wordt de hoeveelheid industrie weergegeven, terwijl de y-as de hoeveelheid fijnstof aangeeft. De grafiek toontaan dat naarmate de industriële activiteit toeneemt, ook de hoeveelheid fijnstof in de lucht stijgt. Dit is vooral zichtbaar bij de punten rechtsboven in de grafiek, waar een hogere industriële aanwezigheid samenvalt met een significante toename van fijnstof.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Lees de gegevens uit het CSV-bestand</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;merged_file.csv&#39;</span><span class="p">)</span>
+
+<span class="c1"># Hernoem kolommen indien nodig</span>
+<span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Value_x&#39;</span><span class="p">:</span> <span class="s1">&#39;Value&#39;</span><span class="p">,</span> <span class="s1">&#39;Value_y&#39;</span><span class="p">:</span> <span class="s1">&#39;Industry_Value&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Sorteer de DataFrame op Industry_Value</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Industry_Value&#39;</span><span class="p">)</span>
+
+<span class="c1"># Plot de grafiek</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Industry_Value&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;FactValueNumeric&#39;</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#528C5E&#39;</span><span class="p">)</span>
+
+<span class="c1"># Labels en titel toevoegen</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Hoeveelheid industrie&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Hoeveelheid fijnstof&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Hoeveelheid industrie versus hoeveelheid fijnstof&#39;</span><span class="p">)</span>
+
+<span class="c1"># Voeg een grid toe</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="c1"># Toon de grafiek</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../_images/8917db58edab35063811aff877cc5a2d5db30543c8b1592c743b81847b0416b5.png" src="../_images/8917db58edab35063811aff877cc5a2d5db30543c8b1592c743b81847b0416b5.png" />
+</div>
+</div>
+<blockquote>
+<div><p><em>Figuur 2: Lijngrafiek van de relatie tussen luchtvervuiling en industriële activiteit.</em></p>
+</div></blockquote>
+<p>De grafiek toont duidelijk aan dat een grotere hoeveelheid industriële activiteit gepaard gaat met een hogere concentratie fijnstof (PM2.5) in de lucht. Vooral bij extreme niveaus van industriële activiteit zien we een significante toename van fijnstof. Dit ondersteunt het argument dat de industrie een grote bijdrage levert aan luchtvervuiling. De correlatie tussen industriële activiteit en fijnstofconcentratie benadrukt de noodzaak voor strengere reguleringen en controlemechanismen om de uitstoot van schadelijke stoffen te beperken. Bovendien onderstreept het de rol van industriële sectoren in het aanpakken van milieuproblemen en de verantwoordelijkheid van bedrijven om schonere technologieën en duurzame praktijken te implementeren. Het is duidelijk dat zonder ingrijpende maatregelen, de industriële activiteiten een aanhoudende en ernstige impact zullen blijven hebben op de luchtkwaliteit en daarmee op de volksgezondheid en het milieu.</p>
+</section>
+<section id="argument-3-vergelijking-van-export-import-en-luchtvervuiling-per-continent">
+<h3>Argument 3: Vergelijking van Export, Import en Luchtvervuiling per Continent<a class="headerlink" href="#argument-3-vergelijking-van-export-import-en-luchtvervuiling-per-continent" title="Link to this heading">#</a></h3>
+<p>De onderstaande grafiek toont de totale export- en importwaarden per continent voor 2019, samen met de gemiddelde luchtverontreinigingswaarden. Azië heeft de hoogste waarden voor zowel export als import, en ook de hoogste niveaus van luchtvervuiling. Europa en Noord-Amerika hebben hoge handelsactiviteiten en gematigde niveaus van luchtvervuiling. Afrika, Oceanië en Zuid-Amerika laten zowel lagere handelsactiviteiten als lagere niveaus van luchtvervuiling zien. De grafiek presenteert de verschillen in handelsactiviteiten en luchtvervuilingsniveaus tussen de continenten.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Laad de import/export dataset</span>
+<span class="n">file_path_trade</span> <span class="o">=</span> <span class="s1">&#39;34_years_world_export_import_dataset.csv&#39;</span>
+<span class="n">data_trade</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_path_trade</span><span class="p">)</span>
+
+<span class="c1"># Filter de dataset voor het jaar 2019</span>
+<span class="n">data_trade_2019</span> <span class="o">=</span> <span class="n">data_trade</span><span class="p">[</span><span class="n">data_trade</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2019</span><span class="p">]</span>
+
+<span class="c1"># Bereken de totale import en export per land in 2019</span>
+<span class="n">total_summary_2019</span> <span class="o">=</span> <span class="n">data_trade_2019</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Partner Name&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+    <span class="n">total_export_2019</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;Export (US$ Thousand)&#39;</span><span class="p">,</span> <span class="s1">&#39;sum&#39;</span><span class="p">),</span>
+    <span class="n">total_import_2019</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;Import (US$ Thousand)&#39;</span><span class="p">,</span> <span class="s1">&#39;sum&#39;</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1"># Laad de luchtverontreiniging dataset</span>
+<span class="n">file_path_pollution</span> <span class="o">=</span> <span class="s1">&#39;air_pollution new.csv&#39;</span>
+<span class="n">data_pollution</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_path_pollution</span><span class="p">)</span>
+
+<span class="c1"># Kolomnamen opschonen en de &#39;2019&#39; kolom naar numeriek converteren</span>
+<span class="n">data_pollution</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">data_pollution</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<span class="n">data_pollution</span><span class="p">[</span><span class="s1">&#39;2019&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">data_pollution</span><span class="p">[</span><span class="s1">&#39;2019&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+
+<span class="c1"># Continent mapping</span>
+<span class="n">continent_data_updated</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Afrika&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Algeria&#39;</span><span class="p">,</span> <span class="s1">&#39;Benin&#39;</span><span class="p">,</span> <span class="s1">&#39;Botswana&#39;</span><span class="p">,</span> <span class="s1">&#39;Burkina Faso&#39;</span><span class="p">,</span> <span class="s1">&#39;Burundi&#39;</span><span class="p">,</span> <span class="s1">&#39;Cape Verde&#39;</span><span class="p">,</span> <span class="s1">&#39;Chad&#39;</span><span class="p">,</span> <span class="s1">&#39;Comoros&#39;</span><span class="p">,</span> <span class="s1">&#39;Congo&#39;</span><span class="p">,</span> <span class="s1">&#39;Guinea&#39;</span><span class="p">,</span> <span class="s1">&#39;Guinea-Bissau&#39;</span><span class="p">,</span> <span class="s1">&#39;Ivory Coast&#39;</span><span class="p">,</span> <span class="s1">&#39;Lesotho&#39;</span><span class="p">,</span> <span class="s1">&#39;Liberia&#39;</span><span class="p">,</span> <span class="s1">&#39;Madagascar&#39;</span><span class="p">,</span> <span class="s1">&#39;Malawi&#39;</span><span class="p">,</span> <span class="s1">&#39;Mali&#39;</span><span class="p">,</span> <span class="s1">&#39;Mauritania&#39;</span><span class="p">,</span> <span class="s1">&#39;Mauritius&#39;</span><span class="p">,</span> <span class="s1">&#39;Mozambique&#39;</span><span class="p">,</span> <span class="s1">&#39;Namibia&#39;</span><span class="p">,</span> <span class="s1">&#39;Niger&#39;</span><span class="p">,</span> <span class="s1">&#39;Rwanda&#39;</span><span class="p">,</span> <span class="s1">&#39;Sao Tome and Principe&#39;</span><span class="p">,</span> <span class="s1">&#39;Senegal&#39;</span><span class="p">,</span> <span class="s1">&#39;Seychelles&#39;</span><span class="p">,</span> <span class="s1">&#39;Sierra Leone&#39;</span><span class="p">,</span> <span class="s1">&#39;Somalia&#39;</span><span class="p">,</span> <span class="s1">&#39;South Sudan&#39;</span><span class="p">,</span> <span class="s1">&#39;Sudan&#39;</span><span class="p">,</span> <span class="s1">&#39;Togo&#39;</span><span class="p">,</span> <span class="s1">&#39;Zambia&#39;</span><span class="p">,</span> <span class="s1">&#39;Zimbabwe&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Azie&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Afghanistan&#39;</span><span class="p">,</span> <span class="s1">&#39;Armenia&#39;</span><span class="p">,</span> <span class="s1">&#39;Azerbaijan&#39;</span><span class="p">,</span> <span class="s1">&#39;Bahrain&#39;</span><span class="p">,</span> <span class="s1">&#39;Bangladesh&#39;</span><span class="p">,</span> <span class="s1">&#39;Bhutan&#39;</span><span class="p">,</span> <span class="s1">&#39;Brunei&#39;</span><span class="p">,</span> <span class="s1">&#39;Cambodia&#39;</span><span class="p">,</span> <span class="s1">&#39;China&#39;</span><span class="p">,</span> <span class="s1">&#39;Georgia&#39;</span><span class="p">,</span> <span class="s1">&#39;India&#39;</span><span class="p">,</span> <span class="s1">&#39;Indonesia&#39;</span><span class="p">,</span> <span class="s1">&#39;Iran&#39;</span><span class="p">,</span> <span class="s1">&#39;Iraq&#39;</span><span class="p">,</span> <span class="s1">&#39;Israel&#39;</span><span class="p">,</span> <span class="s1">&#39;Japan&#39;</span><span class="p">,</span> <span class="s1">&#39;Jordan&#39;</span><span class="p">,</span> <span class="s1">&#39;Kazakhstan&#39;</span><span class="p">,</span> <span class="s1">&#39;Kuwait&#39;</span><span class="p">,</span> <span class="s1">&#39;Kyrgyzstan&#39;</span><span class="p">,</span> <span class="s1">&#39;Laos&#39;</span><span class="p">,</span> <span class="s1">&#39;Lebanon&#39;</span><span class="p">,</span> <span class="s1">&#39;Malaysia&#39;</span><span class="p">,</span> <span class="s1">&#39;Maldives&#39;</span><span class="p">,</span> <span class="s1">&#39;Mongolia&#39;</span><span class="p">,</span> <span class="s1">&#39;Myanmar&#39;</span><span class="p">,</span> <span class="s1">&#39;Nepal&#39;</span><span class="p">,</span> <span class="s1">&#39;North Korea&#39;</span><span class="p">,</span> <span class="s1">&#39;Oman&#39;</span><span class="p">,</span> <span class="s1">&#39;Pakistan&#39;</span><span class="p">,</span> <span class="s1">&#39;Palestine&#39;</span><span class="p">,</span> <span class="s1">&#39;Philippines&#39;</span><span class="p">,</span> <span class="s1">&#39;Qatar&#39;</span><span class="p">,</span> <span class="s1">&#39;Saudi Arabia&#39;</span><span class="p">,</span> <span class="s1">&#39;Singapore&#39;</span><span class="p">,</span> <span class="s1">&#39;South Korea&#39;</span><span class="p">,</span> <span class="s1">&#39;Sri Lanka&#39;</span><span class="p">,</span> <span class="s1">&#39;Syria&#39;</span><span class="p">,</span> <span class="s1">&#39;Taiwan&#39;</span><span class="p">,</span> <span class="s1">&#39;Tajikistan&#39;</span><span class="p">,</span> <span class="s1">&#39;Thailand&#39;</span><span class="p">,</span> <span class="s1">&#39;Timor-Leste&#39;</span><span class="p">,</span> <span class="s1">&#39;Turkmenistan&#39;</span><span class="p">,</span> <span class="s1">&#39;United Arab Emirates&#39;</span><span class="p">,</span> <span class="s1">&#39;Uzbekistan&#39;</span><span class="p">,</span> <span class="s1">&#39;Vietnam&#39;</span><span class="p">,</span> <span class="s1">&#39;Yemen&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Europa&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Albania&#39;</span><span class="p">,</span> <span class="s1">&#39;Andorra&#39;</span><span class="p">,</span> <span class="s1">&#39;Austria&#39;</span><span class="p">,</span> <span class="s1">&#39;Belarus&#39;</span><span class="p">,</span> <span class="s1">&#39;Belgium&#39;</span><span class="p">,</span> <span class="s1">&#39;Bosnia and Herzegovina&#39;</span><span class="p">,</span> <span class="s1">&#39;Bulgaria&#39;</span><span class="p">,</span> <span class="s1">&#39;Croatia&#39;</span><span class="p">,</span> <span class="s1">&#39;Cyprus&#39;</span><span class="p">,</span> <span class="s1">&#39;Czech Republic&#39;</span><span class="p">,</span> <span class="s1">&#39;Denmark&#39;</span><span class="p">,</span> <span class="s1">&#39;Estonia&#39;</span><span class="p">,</span> <span class="s1">&#39;Finland&#39;</span><span class="p">,</span> <span class="s1">&#39;France&#39;</span><span class="p">,</span> <span class="s1">&#39;Germany&#39;</span><span class="p">,</span> <span class="s1">&#39;Greece&#39;</span><span class="p">,</span> <span class="s1">&#39;Hungary&#39;</span><span class="p">,</span> <span class="s1">&#39;Iceland&#39;</span><span class="p">,</span> <span class="s1">&#39;Ireland&#39;</span><span class="p">,</span> <span class="s1">&#39;Italy&#39;</span><span class="p">,</span> <span class="s1">&#39;Kosovo&#39;</span><span class="p">,</span> <span class="s1">&#39;Latvia&#39;</span><span class="p">,</span> <span class="s1">&#39;Lithuania&#39;</span><span class="p">,</span> <span class="s1">&#39;Luxembourg&#39;</span><span class="p">,</span> <span class="s1">&#39;Malta&#39;</span><span class="p">,</span> <span class="s1">&#39;Moldova&#39;</span><span class="p">,</span> <span class="s1">&#39;Monaco&#39;</span><span class="p">,</span> <span class="s1">&#39;Montenegro&#39;</span><span class="p">,</span> <span class="s1">&#39;Netherlands&#39;</span><span class="p">,</span> <span class="s1">&#39;North Macedonia&#39;</span><span class="p">,</span> <span class="s1">&#39;Norway&#39;</span><span class="p">,</span> <span class="s1">&#39;Poland&#39;</span><span class="p">,</span> <span class="s1">&#39;Portugal&#39;</span><span class="p">,</span> <span class="s1">&#39;Romania&#39;</span><span class="p">,</span> <span class="s1">&#39;Russia&#39;</span><span class="p">,</span> <span class="s1">&#39;San Marino&#39;</span><span class="p">,</span> <span class="s1">&#39;Serbia&#39;</span><span class="p">,</span> <span class="s1">&#39;Slovakia&#39;</span><span class="p">,</span> <span class="s1">&#39;Slovenia&#39;</span><span class="p">,</span> <span class="s1">&#39;Spain&#39;</span><span class="p">,</span> <span class="s1">&#39;Sweden&#39;</span><span class="p">,</span> <span class="s1">&#39;Switzerland&#39;</span><span class="p">,</span> <span class="s1">&#39;Turkey&#39;</span><span class="p">,</span> <span class="s1">&#39;Ukraine&#39;</span><span class="p">,</span> <span class="s1">&#39;United Kingdom&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Noord-Amerika&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Antigua and Barbuda&#39;</span><span class="p">,</span> <span class="s1">&#39;Bahamas&#39;</span><span class="p">,</span> <span class="s1">&#39;Barbados&#39;</span><span class="p">,</span> <span class="s1">&#39;Belize&#39;</span><span class="p">,</span> <span class="s1">&#39;Canada&#39;</span><span class="p">,</span> <span class="s1">&#39;Costa Rica&#39;</span><span class="p">,</span> <span class="s1">&#39;Cuba&#39;</span><span class="p">,</span> <span class="s1">&#39;Dominica&#39;</span><span class="p">,</span> <span class="s1">&#39;Dominican Republic&#39;</span><span class="p">,</span> <span class="s1">&#39;El Salvador&#39;</span><span class="p">,</span> <span class="s1">&#39;Grenada&#39;</span><span class="p">,</span> <span class="s1">&#39;Guatemala&#39;</span><span class="p">,</span> <span class="s1">&#39;Haiti&#39;</span><span class="p">,</span> <span class="s1">&#39;Honduras&#39;</span><span class="p">,</span> <span class="s1">&#39;Jamaica&#39;</span><span class="p">,</span> <span class="s1">&#39;Mexico&#39;</span><span class="p">,</span> <span class="s1">&#39;Nicaragua&#39;</span><span class="p">,</span> <span class="s1">&#39;Panama&#39;</span><span class="p">,</span> <span class="s1">&#39;Saint Kitts and Nevis&#39;</span><span class="p">,</span> <span class="s1">&#39;Saint Lucia&#39;</span><span class="p">,</span> <span class="s1">&#39;Saint Vincent and the Grenadines&#39;</span><span class="p">,</span> <span class="s1">&#39;Trinidad and Tobago&#39;</span><span class="p">,</span> <span class="s1">&#39;United States&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Oceanie&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Kiribati&#39;</span><span class="p">,</span> <span class="s1">&#39;Marshall Islands&#39;</span><span class="p">,</span> <span class="s1">&#39;Micronesia&#39;</span><span class="p">,</span> <span class="s1">&#39;Nauru&#39;</span><span class="p">,</span> <span class="s1">&#39;New Zealand&#39;</span><span class="p">,</span> <span class="s1">&#39;Palau&#39;</span><span class="p">,</span> <span class="s1">&#39;Samoa&#39;</span><span class="p">,</span> <span class="s1">&#39;Solomon Islands&#39;</span><span class="p">,</span> <span class="s1">&#39;Tonga&#39;</span><span class="p">,</span> <span class="s1">&#39;Tuvalu&#39;</span><span class="p">,</span> <span class="s1">&#39;Vanuatu&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Zuid-Amerika&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Argentina&#39;</span><span class="p">,</span> <span class="s1">&#39;Bolivia&#39;</span><span class="p">,</span> <span class="s1">&#39;Ecuador&#39;</span><span class="p">,</span> <span class="s1">&#39;Guyana&#39;</span><span class="p">,</span> <span class="s1">&#39;Paraguay&#39;</span><span class="p">,</span> <span class="s1">&#39;Suriname&#39;</span><span class="p">,</span> <span class="s1">&#39;Uruguay&#39;</span><span class="p">,</span> <span class="s1">&#39;Venezuela&#39;</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="c1"># Create a mapping from country to continent</span>
+<span class="n">country_to_continent_updated</span> <span class="o">=</span> <span class="p">{</span><span class="n">country</span><span class="p">:</span> <span class="n">continent</span> <span class="k">for</span> <span class="n">continent</span><span class="p">,</span> <span class="n">countries</span> <span class="ow">in</span> <span class="n">continent_data_updated</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">countries</span><span class="p">}</span>
+
+<span class="c1"># Voeg de continent informatie toe aan de import/export dataset</span>
+<span class="n">total_summary_2019</span><span class="p">[</span><span class="s1">&#39;Continent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">total_summary_2019</span><span class="p">[</span><span class="s1">&#39;Partner Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">country_to_continent_updated</span><span class="p">)</span>
+
+<span class="c1"># Bereken de totale import en export per continent in 2019</span>
+<span class="n">continent_summary_2019</span> <span class="o">=</span> <span class="n">total_summary_2019</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Continent&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+    <span class="n">total_export_2019</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;total_export_2019&#39;</span><span class="p">,</span> <span class="s1">&#39;sum&#39;</span><span class="p">),</span>
+    <span class="n">total_import_2019</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;total_import_2019&#39;</span><span class="p">,</span> <span class="s1">&#39;sum&#39;</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1"># Voeg de continent informatie toe aan de luchtverontreiniging dataset</span>
+<span class="n">data_pollution</span><span class="p">[</span><span class="s1">&#39;Continent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_pollution</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">country_to_continent_updated</span><span class="p">)</span>
+
+<span class="c1"># Bereken de gemiddelde luchtverontreiniging per continent voor 2019</span>
+<span class="n">average_2019_per_continent</span> <span class="o">=</span> <span class="n">data_pollution</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Continent&#39;</span><span class="p">)[</span><span class="s1">&#39;2019&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1"># Merge de luchtverontreiniging gegevens met de handel gegevens</span>
+<span class="n">data_merged</span> <span class="o">=</span> <span class="n">continent_summary_2019</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">average_2019_per_continent</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;Continent&#39;</span><span class="p">)</span>
+
+<span class="c1"># Plot de resultaten</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+
+<span class="n">bar_width</span> <span class="o">=</span> <span class="mf">0.35</span>
+<span class="n">index</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data_merged</span><span class="p">))</span>
+
+<span class="c1"># Updated bar color for total export 2019</span>
+<span class="n">bar1</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">data_merged</span><span class="p">[</span><span class="s1">&#39;total_export_2019&#39;</span><span class="p">],</span> <span class="n">bar_width</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Totale Export 2019&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">)</span>
+<span class="n">bar2</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">bar</span><span class="p">([</span><span class="n">i</span> <span class="o">+</span> <span class="n">bar_width</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">index</span><span class="p">],</span> <span class="n">data_merged</span><span class="p">[</span><span class="s1">&#39;total_import_2019&#39;</span><span class="p">],</span> <span class="n">bar_width</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Totale Import 2019&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#7FBFCE&#39;</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Continent&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Totale waarde (US$ Duizend)&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Totale Export en Import per Continent in 2019&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="n">i</span> <span class="o">+</span> <span class="n">bar_width</span> <span class="o">/</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">index</span><span class="p">])</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">data_merged</span><span class="p">[</span><span class="s1">&#39;Continent&#39;</span><span class="p">])</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
+
+<span class="c1"># Secondary axis for air pollution</span>
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">i</span> <span class="o">+</span> <span class="n">bar_width</span> <span class="o">/</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">index</span><span class="p">],</span> <span class="n">data_merged</span><span class="p">[</span><span class="s1">&#39;2019&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Luchtvervuiling 2019&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Gemiddelde Luchtvervuiling 2019&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../_images/736b78729e507e6ae5bdcfd297d227c15eecd3d513b4463bed6c0ebd8f62c923.png" src="../_images/736b78729e507e6ae5bdcfd297d227c15eecd3d513b4463bed6c0ebd8f62c923.png" />
+</div>
+</div>
+<blockquote>
+<div><p><em>Figuur 3: Totale export en import vergeleken met de gemiddelde luchtvervuiling per continent.</em></p>
+</div></blockquote>
+<p>Hoewel China aanzienlijke inspanningen levert om zijn koolstofintensiteit te verminderen en het aandeel hernieuwbare energie te vergroten, zijn deze doelen mogelijk niet ambitieus genoeg om aan de internationale normen, zoals het Parijsakkoord, te voldoen (“China’s Achievements, New Goals And New Measures For Nationally Determined Contributions”, 2021). Dit komt duidelijk naar voren in de grafiek, waar Azië, met China als grote speler, de hoogste luchtvervuiling heeft. Dit staat in contrast met Europa en Noord-Amerika, waar strengere milieuregels en een meer geavanceerde implementatie van groene technologieën hebben geleid tot lagere niveaus van luchtvervuilin (Liu et al., 2022).</p>
+<p>De grafiek illustreert dat ondanks de economische groei en hoge export- en importwaarden in Azië, dit gepaard gaat met aanzienlijke milieukosten. Dit versterkt de noodzaak voor strengere en effectievere milieumaatregelen om de luchtkwaliteit te verbeteren en de CO2-uitstoot te verminderen.</p>
+<p>De huidige inspanningen van China zijn belangrijk, maar er is meer nodig om de milieu-impact te verminderen. Striktere reguleringen en een snellere transitie naar hernieuwbare energiebronnen zijn cruciaal om de luchtvervuiling en CO2-uitstoot in lijn te brengen met wereldwijde normen. De grafiek onderstreept deze noodzaak door de huidige hoge luchtvervuilingsniveaus in Azië te tonen in vergelijking met andere continenten.</p>
+</section>
+</section>
+<section id="perspectief-2-transport-is-de-hoofdoorzaak-van-luchtvervuiling">
+<h2>Perspectief 2: Transport is de hoofdoorzaak van luchtvervuiling<a class="headerlink" href="#perspectief-2-transport-is-de-hoofdoorzaak-van-luchtvervuiling" title="Link to this heading">#</a></h2>
+<p>Luchtvervuiling is een ingewikkeld probleem met veel oorzaken, waarbij zowel de industrie als het verkeer een belangrijke rol spelen. Auto’s, vrachtwagens en bussen zijn voorbeelden van voertuigen die aanzienlijke hoeveelheden schadelijke stoffen uitstoten, waaronder fijnstof, koolstofmonoxide (CO) en stikstofoxiden (NOx). Deze emissies veroorzaken smog en klimaatverandering, vooral in stedelijke gebieden met veel verkeer.</p>
+<p>Transport is een van de belangrijkste oorzaken van luchtvervuiling in veel landen. De uitbreiding van steden en de toename van het aantal voertuigen hebben geleid tot een toename van de luchtvervuiling. Stadscentra en drukke verkeersknooppunten worden vaak geconfronteerd met hoge niveaus van luchtvervuiling, wat leidt tot slechte zichtbaarheid en luchtkwaliteit.</p>
+<section id="argument-1-totale-broeikasgasuitstoot-per-sector-2018-2024-vergelijking-tussen-industrie-en-transport">
+<h3>Argument 1: Totale Broeikasgasuitstoot per Sector (2018-2024). Vergelijking Tussen Industrie en Transport<a class="headerlink" href="#argument-1-totale-broeikasgasuitstoot-per-sector-2018-2024-vergelijking-tussen-industrie-en-transport" title="Link to this heading">#</a></h3>
+<p>De grafiek hieronder toont de totale uitstoot van broeikasgassen voor de sectoren industrie en transport, gesommeerd over de jaren 2018 tot en met 2024. De balken geven de totale uitstoot voor elk van deze sectoren weer, waarbij de landen met de hoogste uitstoot in deze periode worden benadrukt.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Laad het CSV-bestand</span>
+<span class="n">ghg_emissions_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;ghg-emissions-by-sector.csv&#39;</span><span class="p">)</span>
+
+<span class="c1"># Filter de dataset voor de jaren 2018 tot 2024 en sluit &#39;World&#39; uit</span>
+<span class="n">filtered_ghg_emissions_df</span> <span class="o">=</span> <span class="n">ghg_emissions_df</span><span class="p">[</span>
+    <span class="p">(</span><span class="n">ghg_emissions_df</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2018</span><span class="p">)</span> <span class="o">&amp;</span> 
+    <span class="p">(</span><span class="n">ghg_emissions_df</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2024</span><span class="p">)</span> <span class="o">&amp;</span>
+    <span class="p">(</span><span class="n">ghg_emissions_df</span><span class="p">[</span><span class="s1">&#39;Entity&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;World&#39;</span><span class="p">)</span>  <span class="c1"># Sluit &#39;World&#39; of andere aggregaten uit</span>
+<span class="p">]</span>
+
+<span class="c1"># Selecteer de totalen van emissies voor de geselecteerde sectoren (industrie en transport) voor de gefilterde jaren</span>
+<span class="n">selected_sectors_comparison</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;Greenhouse gas emissions from industry&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Greenhouse gas emissions from transport&quot;</span>
+<span class="p">]</span>
+
+<span class="n">filtered_country_sector_emissions</span> <span class="o">=</span> <span class="n">filtered_ghg_emissions_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Entity&#39;</span><span class="p">)[</span><span class="n">selected_sectors_comparison</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="c1"># Identificeer het top land voor elke sector in de gefilterde data</span>
+<span class="n">filtered_top_country_industry</span> <span class="o">=</span> <span class="n">filtered_country_sector_emissions</span><span class="p">[</span><span class="s2">&quot;Greenhouse gas emissions from industry&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
+<span class="n">filtered_top_emission_industry</span> <span class="o">=</span> <span class="n">filtered_country_sector_emissions</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">filtered_top_country_industry</span><span class="p">,</span> <span class="s2">&quot;Greenhouse gas emissions from industry&quot;</span><span class="p">]</span>
+
+<span class="n">filtered_top_country_transport</span> <span class="o">=</span> <span class="n">filtered_country_sector_emissions</span><span class="p">[</span><span class="s2">&quot;Greenhouse gas emissions from transport&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
+<span class="n">filtered_top_emission_transport</span> <span class="o">=</span> <span class="n">filtered_country_sector_emissions</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">filtered_top_country_transport</span><span class="p">,</span> <span class="s2">&quot;Greenhouse gas emissions from transport&quot;</span><span class="p">]</span>
+
+<span class="c1"># Maak een DataFrame voor de top landen in de gefilterde data</span>
+<span class="n">filtered_top_countries_emissions</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;Sector&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Industrie&#39;</span><span class="p">,</span> <span class="s1">&#39;Transport&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Country&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">filtered_top_country_industry</span><span class="p">,</span> <span class="n">filtered_top_country_transport</span><span class="p">],</span>
+    <span class="s1">&#39;Total Emissions&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">filtered_top_emission_industry</span><span class="p">,</span> <span class="n">filtered_top_emission_transport</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="c1"># Maak het balkendiagram voor de geselecteerde sectoren met top landen benadrukt in de gefilterde data</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">filtered_top_countries_emissions</span><span class="p">[</span><span class="s1">&#39;Sector&#39;</span><span class="p">],</span> <span class="n">filtered_top_countries_emissions</span><span class="p">[</span><span class="s1">&#39;Total Emissions&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;#4d82a8&#39;</span><span class="p">,</span> <span class="s1">&#39;#5ba84d&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Totale broeikasgas uitstoot&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Sector&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Totale uitstoot&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="c1"># Toon het plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../_images/81c362a115655100d2cbb6a4bce2e0ffaacc9b037f497f302f02a7b891d96b52.png" src="../_images/81c362a115655100d2cbb6a4bce2e0ffaacc9b037f497f302f02a7b891d96b52.png" />
+</div>
+</div>
+<blockquote>
+<div><p><em>Figuur 4: Totale uitstoot van broeikasgassen voor de sectoren industrie en transport.</em></p>
+</div></blockquote>
+<p>De bovenstaande staafdiagram vergelijkt de totale uitstoot van broeikasgassen door de industrie- en transportsectoren. Uit de vergelijking blijkt dat de transportsector een hogere totale uitstoot heeft vergeleken met de industriesector, wat aangeeft dat transport een significantere impact heeft op luchtvervuiling. Hoewel de industrie nog steeds een substantiële bijdrage levert aan de uitstoot van broeikasgassen, is de totale uitstoot van de industrie lager dan die van de transportsector.</p>
+<p>Deze vergelijking benadrukt de grotere invloed van de transportsector op luchtvervuiling. Dit suggereert dat inspanningen om de uitstoot van broeikasgassen te verminderen bijzonder effectief kunnen zijn als ze gericht zijn op het verminderen van uitstoot door transport. Mogelijke strategieën hiervoor zijn het verbeteren van de brandstofefficiëntie, het promoten van elektrische voertuigen en het verbeteren van openbare transportsystemen.</p>
+</section>
+<section id="argument-2-relatie-tussen-verkeersvolume-en-co2-uitstoot">
+<h3>Argument 2: Relatie Tussen Verkeersvolume en CO2-uitstoot.<a class="headerlink" href="#argument-2-relatie-tussen-verkeersvolume-en-co2-uitstoot" title="Link to this heading">#</a></h3>
+<p>In de onderstaande grafiek zie je de hoeveelheid verkeer (de Traffic Index) uitgezet tegenover de hoeveelheid CO2 (CO2 Emission Index). De grafiek bevat de data van 84 landen, wat betekend dat elk punt in de plot een land is waarvan je op de y-as de hoeveelheid verkeer kunt zien, en op de x-as de CO2 uitstoot hiervan.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Load the CSV file</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Adjusted_TransportCO2.csv&#39;</span><span class="p">)</span>
+
+<span class="c1"># Manually mapping countries to continents</span>
+<span class="n">continent_map</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Europe&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Albania&quot;</span><span class="p">,</span> <span class="s2">&quot;Armenia&quot;</span><span class="p">,</span> <span class="s2">&quot;Austria&quot;</span><span class="p">,</span> <span class="s2">&quot;Belgium&quot;</span><span class="p">,</span> <span class="s2">&quot;Bulgaria&quot;</span><span class="p">,</span> <span class="s2">&quot;Croatia&quot;</span><span class="p">,</span> <span class="s2">&quot;Cyprus&quot;</span><span class="p">,</span> <span class="s2">&quot;Czech Republic&quot;</span><span class="p">,</span> 
+               <span class="s2">&quot;Denmark&quot;</span><span class="p">,</span> <span class="s2">&quot;Estonia&quot;</span><span class="p">,</span> <span class="s2">&quot;Finland&quot;</span><span class="p">,</span> <span class="s2">&quot;France&quot;</span><span class="p">,</span> <span class="s2">&quot;Georgia&quot;</span><span class="p">,</span> <span class="s2">&quot;Germany&quot;</span><span class="p">,</span> <span class="s2">&quot;Greece&quot;</span><span class="p">,</span> <span class="s2">&quot;Hungary&quot;</span><span class="p">,</span> <span class="s2">&quot;Iceland&quot;</span><span class="p">,</span> 
+               <span class="s2">&quot;Ireland&quot;</span><span class="p">,</span> <span class="s2">&quot;Italy&quot;</span><span class="p">,</span> <span class="s2">&quot;Latvia&quot;</span><span class="p">,</span> <span class="s2">&quot;Lithuania&quot;</span><span class="p">,</span> <span class="s2">&quot;Luxembourg&quot;</span><span class="p">,</span> <span class="s2">&quot;Malta&quot;</span><span class="p">,</span> <span class="s2">&quot;Moldova&quot;</span><span class="p">,</span> <span class="s2">&quot;Netherlands&quot;</span><span class="p">,</span> 
+               <span class="s2">&quot;North Macedonia&quot;</span><span class="p">,</span> <span class="s2">&quot;Norway&quot;</span><span class="p">,</span> <span class="s2">&quot;Poland&quot;</span><span class="p">,</span> <span class="s2">&quot;Portugal&quot;</span><span class="p">,</span> <span class="s2">&quot;Romania&quot;</span><span class="p">,</span> <span class="s2">&quot;Russia&quot;</span><span class="p">,</span> <span class="s2">&quot;Serbia&quot;</span><span class="p">,</span> <span class="s2">&quot;Slovakia&quot;</span><span class="p">,</span> 
+               <span class="s2">&quot;Slovenia&quot;</span><span class="p">,</span> <span class="s2">&quot;Spain&quot;</span><span class="p">,</span> <span class="s2">&quot;Sweden&quot;</span><span class="p">,</span> <span class="s2">&quot;Switzerland&quot;</span><span class="p">,</span> <span class="s2">&quot;Ukraine&quot;</span><span class="p">,</span> <span class="s2">&quot;United Kingdom&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Asia&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Armenia&quot;</span><span class="p">,</span> <span class="s2">&quot;Georgia&quot;</span><span class="p">,</span> <span class="s2">&quot;Russia&quot;</span><span class="p">,</span> <span class="s2">&quot;Azerbaijan&quot;</span><span class="p">,</span> <span class="s2">&quot;Bahrain&quot;</span><span class="p">,</span> <span class="s2">&quot;Bangladesh&quot;</span><span class="p">,</span> <span class="s2">&quot;Bhutan&quot;</span><span class="p">,</span> <span class="s2">&quot;Brunei&quot;</span><span class="p">,</span> 
+             <span class="s2">&quot;Cambodia&quot;</span><span class="p">,</span> <span class="s2">&quot;China&quot;</span><span class="p">,</span> <span class="s2">&quot;India&quot;</span><span class="p">,</span> <span class="s2">&quot;Indonesia&quot;</span><span class="p">,</span> <span class="s2">&quot;Iran&quot;</span><span class="p">,</span> <span class="s2">&quot;Iraq&quot;</span><span class="p">,</span> <span class="s2">&quot;Israel&quot;</span><span class="p">,</span> <span class="s2">&quot;Japan&quot;</span><span class="p">,</span> <span class="s2">&quot;Jordan&quot;</span><span class="p">,</span> <span class="s2">&quot;Kazakhstan&quot;</span><span class="p">,</span> 
+             <span class="s2">&quot;Kuwait&quot;</span><span class="p">,</span> <span class="s2">&quot;Kyrgyzstan&quot;</span><span class="p">,</span> <span class="s2">&quot;Laos&quot;</span><span class="p">,</span> <span class="s2">&quot;Lebanon&quot;</span><span class="p">,</span> <span class="s2">&quot;Malaysia&quot;</span><span class="p">,</span> <span class="s2">&quot;Maldives&quot;</span><span class="p">,</span> <span class="s2">&quot;Mongolia&quot;</span><span class="p">,</span> <span class="s2">&quot;Myanmar&quot;</span><span class="p">,</span> <span class="s2">&quot;Nepal&quot;</span><span class="p">,</span> 
+             <span class="s2">&quot;North Korea&quot;</span><span class="p">,</span> <span class="s2">&quot;Oman&quot;</span><span class="p">,</span> <span class="s2">&quot;Pakistan&quot;</span><span class="p">,</span> <span class="s2">&quot;Palestine&quot;</span><span class="p">,</span> <span class="s2">&quot;Philippines&quot;</span><span class="p">,</span> <span class="s2">&quot;Qatar&quot;</span><span class="p">,</span> <span class="s2">&quot;Saudi Arabia&quot;</span><span class="p">,</span> <span class="s2">&quot;Singapore&quot;</span><span class="p">,</span> 
+             <span class="s2">&quot;South Korea&quot;</span><span class="p">,</span> <span class="s2">&quot;Sri Lanka&quot;</span><span class="p">,</span> <span class="s2">&quot;Syria&quot;</span><span class="p">,</span> <span class="s2">&quot;Taiwan&quot;</span><span class="p">,</span> <span class="s2">&quot;Tajikistan&quot;</span><span class="p">,</span> <span class="s2">&quot;Thailand&quot;</span><span class="p">,</span> <span class="s2">&quot;Timor-Leste&quot;</span><span class="p">,</span> <span class="s2">&quot;Turkey&quot;</span><span class="p">,</span> 
+             <span class="s2">&quot;Turkmenistan&quot;</span><span class="p">,</span> <span class="s2">&quot;United Arab Emirates&quot;</span><span class="p">,</span> <span class="s2">&quot;Uzbekistan&quot;</span><span class="p">,</span> <span class="s2">&quot;Vietnam&quot;</span><span class="p">,</span> <span class="s2">&quot;Yemen&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Africa&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Algeria&quot;</span><span class="p">,</span> <span class="s2">&quot;Angola&quot;</span><span class="p">,</span> <span class="s2">&quot;Benin&quot;</span><span class="p">,</span> <span class="s2">&quot;Botswana&quot;</span><span class="p">,</span> <span class="s2">&quot;Burkina Faso&quot;</span><span class="p">,</span> <span class="s2">&quot;Burundi&quot;</span><span class="p">,</span> <span class="s2">&quot;Cabo Verde&quot;</span><span class="p">,</span> <span class="s2">&quot;Cameroon&quot;</span><span class="p">,</span> 
+               <span class="s2">&quot;Central African Republic&quot;</span><span class="p">,</span> <span class="s2">&quot;Chad&quot;</span><span class="p">,</span> <span class="s2">&quot;Comoros&quot;</span><span class="p">,</span> <span class="s2">&quot;Congo&quot;</span><span class="p">,</span> <span class="s2">&quot;Djibouti&quot;</span><span class="p">,</span> <span class="s2">&quot;Egypt&quot;</span><span class="p">,</span> <span class="s2">&quot;Equatorial Guinea&quot;</span><span class="p">,</span> 
+               <span class="s2">&quot;Eritrea&quot;</span><span class="p">,</span> <span class="s2">&quot;Eswatini&quot;</span><span class="p">,</span> <span class="s2">&quot;Ethiopia&quot;</span><span class="p">,</span> <span class="s2">&quot;Gabon&quot;</span><span class="p">,</span> <span class="s2">&quot;Gambia&quot;</span><span class="p">,</span> <span class="s2">&quot;Ghana&quot;</span><span class="p">,</span> <span class="s2">&quot;Guinea&quot;</span><span class="p">,</span> <span class="s2">&quot;Guinea-Bissau&quot;</span><span class="p">,</span> <span class="s2">&quot;Ivory Coast&quot;</span><span class="p">,</span> 
+               <span class="s2">&quot;Kenya&quot;</span><span class="p">,</span> <span class="s2">&quot;Lesotho&quot;</span><span class="p">,</span> <span class="s2">&quot;Liberia&quot;</span><span class="p">,</span> <span class="s2">&quot;Libya&quot;</span><span class="p">,</span> <span class="s2">&quot;Madagascar&quot;</span><span class="p">,</span> <span class="s2">&quot;Malawi&quot;</span><span class="p">,</span> <span class="s2">&quot;Mali&quot;</span><span class="p">,</span> <span class="s2">&quot;Mauritania&quot;</span><span class="p">,</span> <span class="s2">&quot;Mauritius&quot;</span><span class="p">,</span> 
+               <span class="s2">&quot;Morocco&quot;</span><span class="p">,</span> <span class="s2">&quot;Mozambique&quot;</span><span class="p">,</span> <span class="s2">&quot;Namibia&quot;</span><span class="p">,</span> <span class="s2">&quot;Niger&quot;</span><span class="p">,</span> <span class="s2">&quot;Nigeria&quot;</span><span class="p">,</span> <span class="s2">&quot;Rwanda&quot;</span><span class="p">,</span> <span class="s2">&quot;Sao Tome and Principe&quot;</span><span class="p">,</span> <span class="s2">&quot;Senegal&quot;</span><span class="p">,</span> 
+               <span class="s2">&quot;Seychelles&quot;</span><span class="p">,</span> <span class="s2">&quot;Sierra Leone&quot;</span><span class="p">,</span> <span class="s2">&quot;Somalia&quot;</span><span class="p">,</span> <span class="s2">&quot;South Africa&quot;</span><span class="p">,</span> <span class="s2">&quot;South Sudan&quot;</span><span class="p">,</span> <span class="s2">&quot;Sudan&quot;</span><span class="p">,</span> <span class="s2">&quot;Tanzania&quot;</span><span class="p">,</span> <span class="s2">&quot;Togo&quot;</span><span class="p">,</span> 
+               <span class="s2">&quot;Tunisia&quot;</span><span class="p">,</span> <span class="s2">&quot;Uganda&quot;</span><span class="p">,</span> <span class="s2">&quot;Zambia&quot;</span><span class="p">,</span> <span class="s2">&quot;Zimbabwe&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;North America&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Antigua and Barbuda&quot;</span><span class="p">,</span> <span class="s2">&quot;Bahamas&quot;</span><span class="p">,</span> <span class="s2">&quot;Barbados&quot;</span><span class="p">,</span> <span class="s2">&quot;Belize&quot;</span><span class="p">,</span> <span class="s2">&quot;Canada&quot;</span><span class="p">,</span> <span class="s2">&quot;Costa Rica&quot;</span><span class="p">,</span> <span class="s2">&quot;Cuba&quot;</span><span class="p">,</span> 
+                      <span class="s2">&quot;Dominica&quot;</span><span class="p">,</span> <span class="s2">&quot;Dominican Republic&quot;</span><span class="p">,</span> <span class="s2">&quot;El Salvador&quot;</span><span class="p">,</span> <span class="s2">&quot;Grenada&quot;</span><span class="p">,</span> <span class="s2">&quot;Guatemala&quot;</span><span class="p">,</span> <span class="s2">&quot;Haiti&quot;</span><span class="p">,</span> <span class="s2">&quot;Honduras&quot;</span><span class="p">,</span> 
+                      <span class="s2">&quot;Jamaica&quot;</span><span class="p">,</span> <span class="s2">&quot;Mexico&quot;</span><span class="p">,</span> <span class="s2">&quot;Nicaragua&quot;</span><span class="p">,</span> <span class="s2">&quot;Panama&quot;</span><span class="p">,</span> <span class="s2">&quot;Saint Kitts and Nevis&quot;</span><span class="p">,</span> <span class="s2">&quot;Saint Lucia&quot;</span><span class="p">,</span> 
+                      <span class="s2">&quot;Saint Vincent and the Grenadines&quot;</span><span class="p">,</span> <span class="s2">&quot;Trinidad and Tobago&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;South America&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Argentina&quot;</span><span class="p">,</span> <span class="s2">&quot;Bolivia&quot;</span><span class="p">,</span> <span class="s2">&quot;Brazil&quot;</span><span class="p">,</span> <span class="s2">&quot;Chile&quot;</span><span class="p">,</span> <span class="s2">&quot;Colombia&quot;</span><span class="p">,</span> <span class="s2">&quot;Ecuador&quot;</span><span class="p">,</span> <span class="s2">&quot;Guyana&quot;</span><span class="p">,</span> <span class="s2">&quot;Paraguay&quot;</span><span class="p">,</span> 
+                      <span class="s2">&quot;Peru&quot;</span><span class="p">,</span> <span class="s2">&quot;Suriname&quot;</span><span class="p">,</span> <span class="s2">&quot;Uruguay&quot;</span><span class="p">,</span> <span class="s2">&quot;Venezuela&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Oceania&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Australia&quot;</span><span class="p">,</span> <span class="s2">&quot;Fiji&quot;</span><span class="p">,</span> <span class="s2">&quot;Kiribati&quot;</span><span class="p">,</span> <span class="s2">&quot;Marshall Islands&quot;</span><span class="p">,</span> <span class="s2">&quot;Micronesia&quot;</span><span class="p">,</span> <span class="s2">&quot;Nauru&quot;</span><span class="p">,</span> <span class="s2">&quot;New Zealand&quot;</span><span class="p">,</span> 
+                <span class="s2">&quot;Palau&quot;</span><span class="p">,</span> <span class="s2">&quot;Papua New Guinea&quot;</span><span class="p">,</span> <span class="s2">&quot;Samoa&quot;</span><span class="p">,</span> <span class="s2">&quot;Solomon Islands&quot;</span><span class="p">,</span> <span class="s2">&quot;Tonga&quot;</span><span class="p">,</span> <span class="s2">&quot;Tuvalu&quot;</span><span class="p">,</span> <span class="s2">&quot;Vanuatu&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="c1"># Create a function to map countries to continents</span>
+<span class="k">def</span> <span class="nf">get_continent</span><span class="p">(</span><span class="n">country</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">continent</span><span class="p">,</span> <span class="n">countries</span> <span class="ow">in</span> <span class="n">continent_map</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">countries</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">continent</span>
+    <span class="k">return</span> <span class="s2">&quot;Other&quot;</span>
+
+<span class="c1"># Apply the function to create a new column</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Continent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">get_continent</span><span class="p">)</span>
+
+<span class="c1"># Sort the dataframe by CO2 Emission Index</span>
+<span class="n">sorted_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;CO2 Emission Index&#39;</span><span class="p">)</span>
+
+<span class="c1"># Define colors for each continent</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Europe&quot;</span><span class="p">:</span> <span class="s2">&quot;#1f77b4&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Asia&quot;</span><span class="p">:</span> <span class="s2">&quot;#ff7f0e&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Africa&quot;</span><span class="p">:</span> <span class="s2">&quot;#2ca02c&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;North America&quot;</span><span class="p">:</span> <span class="s2">&quot;#d62728&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;South America&quot;</span><span class="p">:</span> <span class="s2">&quot;#9467bd&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Oceania&quot;</span><span class="p">:</span> <span class="s2">&quot;#8c564b&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Other&quot;</span><span class="p">:</span> <span class="s2">&quot;#e377c2&quot;</span>
+<span class="p">}</span>
+
+<span class="c1"># Create a scatter plot with colors based on the continent</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Plot each continent with its respective color</span>
+<span class="k">for</span> <span class="n">continent</span><span class="p">,</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">colors</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">subset</span> <span class="o">=</span> <span class="n">sorted_df</span><span class="p">[</span><span class="n">sorted_df</span><span class="p">[</span><span class="s1">&#39;Continent&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">continent</span><span class="p">]</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">subset</span><span class="p">[</span><span class="s1">&#39;CO2 Emission Index&#39;</span><span class="p">],</span> <span class="n">subset</span><span class="p">[</span><span class="s1">&#39;Traffic Index&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">continent</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+
+<span class="c1"># Fit a linear trend line</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">sorted_df</span><span class="p">[</span><span class="s1">&#39;CO2 Emission Index&#39;</span><span class="p">],</span> <span class="n">sorted_df</span><span class="p">[</span><span class="s1">&#39;Traffic Index&#39;</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">poly1d</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sorted_df</span><span class="p">[</span><span class="s1">&#39;CO2 Emission Index&#39;</span><span class="p">],</span> <span class="n">p</span><span class="p">(</span><span class="n">sorted_df</span><span class="p">[</span><span class="s1">&#39;CO2 Emission Index&#39;</span><span class="p">]),</span> <span class="s2">&quot;k--&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Trend Line&quot;</span><span class="p">)</span>
+
+<span class="c1"># Set the labels and title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;CO2 Emissie Index&#39;</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Verkeer Index&#39;</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Verkeer vs CO2 Emissie Index&#39;</span><span class="p">)</span>
+
+<span class="c1"># Customize the x-axis labels and ensure it starts at 0</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">ticks</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">sorted_df</span><span class="p">[</span><span class="s1">&#39;CO2 Emission Index&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span> <span class="o">+</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Ensure the x-axis starts at 0</span>
+
+<span class="c1"># Add legend and grid</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Show the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../_images/ec86519e88da17fe7230c978037f6bf14cf1e60846f2f867dfdf7fe9e6819485.png" src="../_images/ec86519e88da17fe7230c978037f6bf14cf1e60846f2f867dfdf7fe9e6819485.png" />
+</div>
+</div>
+<blockquote>
+<div><p><em>Figuur 5: Hoeveelheid verkeer versus de CO2 uitstoot.</em></p>
+</div></blockquote>
+<p>Uit de grafiek blijkt een positieve correlatie tussen de CO2 Emissie Index en de Verkeer Index, wat aangeeft dat landen met hogere verkeersvolumes doorgaans ook hogere CO2-uitstoot hebben. De zwarte trendlijn laat een opwaartse trend zien, wat bevestigt dat naarmate de verkeersintensiteit toeneemt, de CO2-uitstoot stijgt. Deze bevindingen benadrukken dat maatregelen gericht op het verminderen van verkeer waarschijnlijk een positieve impact zullen hebben op het verlagen van de CO2-uitstoot.</p>
+<p>Bovendien spreekt deze grafiek die het perspectief van de transport en verkeer ondersteund, figuur 3 die het perspectief van de industrie ondersteund, enorm tegen. In figuur 5 is namenlijk te zien dat Europa een vrij lage CO2 Emissie Index heeft als je dit vergelijkt met de andere werelddelen. Als je echter kijkt naar Europa in figuur 3 dan zie je daar dat Europa een veel hogere luchtvervuiling heeft dan veel andere werelddelen. Deze bevinding laat het verschil in beide perspectieven goed zien.</p>
+</section>
+<section id="argument-3-jaarlijkse-stijging-van-gemiddelde-co2-uitstoot-door-transport-wereldwijd">
+<h3>Argument 3: Jaarlijkse Stijging van Gemiddelde CO2-uitstoot door Transport Wereldwijd<a class="headerlink" href="#argument-3-jaarlijkse-stijging-van-gemiddelde-co2-uitstoot-door-transport-wereldwijd" title="Link to this heading">#</a></h3>
+<p>De grafiek toont de gemiddelde CO2-emissies van de transportsector wereldwijd van 1990 tot 2019. Op de horizontale as staan de jaren, en op de verticale as de gemiddelde CO2-emissies in tonnen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;co2-emissions-transport.csv&#39;</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Remove the &#39;Code&#39; column</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Code&#39;</span><span class="p">])</span>
+
+<span class="c1"># Group by &#39;Year&#39; and calculate the mean of &#39;Carbon dioxide emissions from transport&#39;, ignoring NaNs</span>
+<span class="n">yearly_avg_emissions</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">)[</span><span class="s1">&#39;Carbon dioxide emissions from transport&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="c1"># Reset the index for plotting</span>
+<span class="n">yearly_avg_emissions</span> <span class="o">=</span> <span class="n">yearly_avg_emissions</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1"># Filter out the year 2020</span>
+<span class="n">yearly_avg_emissions_filtered</span> <span class="o">=</span> <span class="n">yearly_avg_emissions</span><span class="p">[</span><span class="n">yearly_avg_emissions</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">2020</span><span class="p">]</span>
+
+<span class="c1"># Plot the data</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">yearly_avg_emissions_filtered</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">],</span> <span class="n">yearly_avg_emissions_filtered</span><span class="p">[</span><span class="s1">&#39;Carbon dioxide emissions from transport&#39;</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Gemiddelde CO2-emissies per jaar van transport wereldwijd&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Jaar&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Gemiddelde CO2-emissies (ton)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/b7845d09694fdd0483b16ec89d14d98a841eea4b1c3385be866c305b99161d82.png" src="../_images/b7845d09694fdd0483b16ec89d14d98a841eea4b1c3385be866c305b99161d82.png" />
+</div>
+</div>
+<blockquote>
+<div><p>Figuur 6: De gemiddelde CO2-emissie wereldwijd.</p>
+</div></blockquote>
+<p>Uit de grafiek blijkt dat de gemiddelde CO2-emissies door de transportsector wereldwijd van 1990 tot 2019 duidelijk zijn gestegen. Dit wijst op een aanzienlijke toename van de uitstoot in de loop van de tijd. De uitstoot in de recentere jaren (vanaf 2000) is hoger dan in de jaren 90, wat suggereert dat de transportsector een steeds grotere bijdrage levert aan de wereldwijde CO2-uitstoot. Hoewel er jaarlijkse fluctuaties zijn, blijft de algemene trend stijgend. Dit benadrukt de noodzaak van gerichte maatregelen om de CO2-uitstoot in de transportsector te verminderen en de klimaatverandering tegen te gaan.</p>
+</section>
+</section>
+<section id="reflectie">
+<h2>Reflectie<a class="headerlink" href="#reflectie" title="Link to this heading">#</a></h2>
+<p>In het begin ondervonden we enige uitdagingen bij het vinden van een geschikte dataset. We vonden de opdracht in het begin een beetje lastig en we vonden het moeilijk om twee verschillende perspectieven over een onderwerp te identificeren. Deze uitdagingen leidden tot een langzamer startproces.</p>
+<p>Toen we uiteindelijk een relevant onderwerp hadden gevonden, ging het toch wel heel snel. We waren in staat om direct een efficiënte taakverdeling op te stellen, waardoor het werktempo flink toenam. De samenwerking verliep soepel en de werkzaamheden werden effectief verdeeld.</p>
+<p>Op 25 juni 2024 verzamelde ons team zich met twee andere groepjes voor peer feedback, waarbij elke groep om de beurt het werk van de afgelopen 3 weken presenteerde. Na de pitch gaven de andere twee groepen feedback over wat goed was gedaan en wat verbeterd kon worden.</p>
+<p>De belangrijkste complimenten die we ontvingen voor de versie die we toen hadden, waren dat ons dataverhaal er erg goed uitzag en ook dat onze grafieken er goed uitzagen wat het een strakke uitstraling gaf. De verschillende soorten grafieken maakten het dataverhaal interessant om naar te kijken.</p>
+<p>Hieronder staan een aantal onderdedlen die in de feedbackronde zijn benoemd door onze klasgenoten evenals de TAs:</p>
+<ul class="simple">
+<li><p>Voor onze scatterplot kregen we het advies om kleuren te gebruiken om de verschillende werelddelen in de grafiek aan te geven, zodat de grafiek visueel aantrekkelijker wordt.</p></li>
+<li><p>Er was een vraag over hoe de regulering van transport binnen een land invloed heeft op de luchtvervuiling, wat suggereerde dat we dit aspect verder in onze analyse zouden onderzoeken.</p></li>
+<li><p>De lijn in de grafiek over de totale export en import was in eerste instantie rood. De feedback hierop was dat de lijn niet duidelijk genoeg was door de kleurencombinatie, deze lijn is nu veranderd van kleur om de lijn duidelijker te maken.</p></li>
+</ul>
+<p>Later hebben we als team afgesproken dat dit allemaal gepaste feedback was om aan te werken. Direct na de feedbackdag hebben we de suggesties geïmplementeerd, waarbij we kleuren aan onze scatterplot hebben toegevoegd om continenten te onderscheiden en het effect van transportreguleringen op luchtvervuiling hebben onderzocht.</p>
+</section>
+<section id="werkverdeling">
+<h2>Werkverdeling<a class="headerlink" href="#werkverdeling" title="Link to this heading">#</a></h2>
+<p>De samenwerking tijdens ons project verliep heel goed. We hielden regelmatig contact via WhatsApp en ook tijdens de werkgroepen. Tijdens de allereerste les pitchten we allemaal onze ideeën en stuurden we verschillende datasets naar elkaar op die ons interessant leken. Zo zijn we uiteindelijk tot een conclusie gekomen en hadden we besloten om het over luchtvervuiling te doen omdat dat een heel actueel onderwerp is. Daarna zijn we los van elkaar verschillende datasets gaan opzoeken en die samenvoegen. Vervolgens gingen we kijken op welke manier we deze data konden visualiseren. We stemden dit een beetje met elkaar af zodat we niet allemaal dezelfde soort grafieken hadden. Na de feedback zijn we vooral bezig geweest met de feedback verwerken en het aanpassen van onze grafieken.</p>
+<section id="melvin">
+<h3>Melvin:<a class="headerlink" href="#melvin" title="Link to this heading">#</a></h3>
+<p>Melvin was verantwoordelijk voor het samenvoegen van datasets en hield zich vooral bezig met het maken van de grafieken. Hij zorgde ook voor de volgorde van de grafieken en of ze goed aansloten op de verschillende perspectieven.</p>
+</section>
+<section id="ceylan">
+<h3>Ceylan:<a class="headerlink" href="#ceylan" title="Link to this heading">#</a></h3>
+<p>Ceylan werkte veel aan de proposal van het onderzoek en zorgde ervoor dat alles netjes in GitHub kwam te staan. Hij hield zich ook bezig met het maken van grafieken.</p>
+</section>
+<section id="froukje">
+<h3>Froukje:<a class="headerlink" href="#froukje" title="Link to this heading">#</a></h3>
+<p>Froukje las het document na om ervoor te zorgen dat alles correct was en maakte ook een grafiek. Ook zorgde ze ervoor dat de referentielijst correct was.</p>
+</section>
+<section id="isa">
+<h3>Isa:<a class="headerlink" href="#isa" title="Link to this heading">#</a></h3>
+<p>Isa zorgde voor het tijdmanagement, dus ervoor zorgen dat we met z’n allen aan de opdracht zouden werken en op tijd klaar zouden zijn. Daarnaast hield ze zich bezig met de tekst binnen het document, zoals het controleren of alle conclusies en de inleiding klopten.</p>
+</section>
+</section>
+<section id="referenties">
+<h2>Referenties<a class="headerlink" href="#referenties" title="Link to this heading">#</a></h2>
+<p>China’s Achievements, New Goals and New Measures for Nationally Determined Contributions. (2021). In China’s Achievements, New Goals And New Measures For Nationally Determined Contributions [Report]. <a class="reference external" href="https://unfccc.int/sites/default/files/NDC/2022-06/China%E2%80%99s%20Achievements%2C%20New%20Goals%20and%20New%20Measures%20for%20Nationally%20Determined%20Contributions.pdf">https://unfccc.int/sites/default/files/NDC/2022-06/China’s Achievements%2C New Goals and New Measures for Nationally Determined Contributions.pdf</a></p>
+<p>Global Air Pollution Dataset. (2022, 8 november). Kaggle. <a class="reference external" href="https://www.kaggle.com/datasets/hasibalmuzdadid/global-air-pollution-dataset">https://www.kaggle.com/datasets/hasibalmuzdadid/global-air-pollution-dataset</a></p>
+<p>Industrial Production by Indicator, Country and Year-United Nations Economic Commission for Europe. (z.d.). United Nations Economic Commission For Europe. <a class="reference external" href="https://w3.unece.org/PXWeb2015/pxweb/en/STAT/STAT__20-ME__5-MEPW/0_en_MECCIndProdY_r.px/">https://w3.unece.org/PXWeb2015/pxweb/en/STAT/STAT__20-ME__5-MEPW/0_en_MECCIndProdY_r.px/</a></p>
+<p>Liu, C., Xin, L., &amp; Li, J. (2022). Environmental regulation and manufacturing carbon emissions in China: a new perspective on local government competition. Environmental Science And Pollution Research International, 29(24), 36351–36375. <a class="reference external" href="https://doi.org/10.1007/s11356-021-18041-w">https://doi.org/10.1007/s11356-021-18041-w</a></p>
+<p>Ritchie, H., Rosado, P., &amp; Roser, M. (2024, January 5). Breakdown of carbon dioxide, methane and nitrous oxide emissions by sector. Our World in Data. <a class="reference external" href="https://ourworldindata.org/emissions-by-sector">https://ourworldindata.org/emissions-by-sector</a></p>
+<p>Traffic Index by Country 2024. (z.d.). <a class="reference external" href="https://www.numbeo.com/traffic/rankings_by_country.jsp">https://www.numbeo.com/traffic/rankings_by_country.jsp</a></p>
+<p>UNdata. (z.d.). <a class="reference external" href="http://data.un.org/Default.aspx">http://data.un.org/Default.aspx</a></p>
+<p>World Export &amp; Import Dataset (1989 - 2023). (2023, 9 september). Kaggle. <a class="reference external" href="https://www.kaggle.com/datasets/muhammadtalhaawan/world-export-and-import-dataset">https://www.kaggle.com/datasets/muhammadtalhaawan/world-export-and-import-dataset</a></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="home.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Jupyter Book Tutorial</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">De hoofdoorzaak van luchtvervuiling: transport versus industrie</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introductie">Introductie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-en-voorverwerking">Dataset en Voorverwerking</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#variabele-omschijvingen">Variabele omschijvingen.</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perspectief-1-industrie-is-de-hoofdoorzaak-van-luchtvervuiing">Perspectief 1: Industrie is de hoofdoorzaak van luchtvervuiing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#argument-1-wereldwijde-luchtvervuiling-concentraties-van-pm2-5-per-land">Argument 1: Wereldwijde Luchtvervuiling Concentraties van PM2.5 per Land</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#argument-2-relatie-tussen-industriele-activiteit-en-fijnstofconcentraties-pm2-5-in-de-lucht">Argument 2: Relatie Tussen Industriële Activiteit en Fijnstofconcentraties (PM2.5) in de Lucht</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#argument-3-vergelijking-van-export-import-en-luchtvervuiling-per-continent">Argument 3: Vergelijking van Export, Import en Luchtvervuiling per Continent</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perspectief-2-transport-is-de-hoofdoorzaak-van-luchtvervuiling">Perspectief 2: Transport is de hoofdoorzaak van luchtvervuiling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#argument-1-totale-broeikasgasuitstoot-per-sector-2018-2024-vergelijking-tussen-industrie-en-transport">Argument 1: Totale Broeikasgasuitstoot per Sector (2018-2024). Vergelijking Tussen Industrie en Transport</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#argument-2-relatie-tussen-verkeersvolume-en-co2-uitstoot">Argument 2: Relatie Tussen Verkeersvolume en CO2-uitstoot.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#argument-3-jaarlijkse-stijging-van-gemiddelde-co2-uitstoot-door-transport-wereldwijd">Argument 3: Jaarlijkse Stijging van Gemiddelde CO2-uitstoot door Transport Wereldwijd</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflectie">Reflectie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#werkverdeling">Werkverdeling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melvin">Melvin:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ceylan">Ceylan:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#froukje">Froukje:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#isa">Isa:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referenties">Referenties</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Yen-Chia Hsu
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
