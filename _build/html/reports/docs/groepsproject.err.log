@@ -1,0 +1,81 @@
+Traceback (most recent call last):
+  File "/Users/melvindalhuisen/anaconda3/envs/jupyterbook/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/Users/melvindalhuisen/anaconda3/envs/jupyterbook/lib/python3.10/site-packages/nbclient/client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/Users/melvindalhuisen/anaconda3/envs/jupyterbook/lib/python3.10/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+  File "/Users/melvindalhuisen/anaconda3/envs/jupyterbook/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/Users/melvindalhuisen/anaconda3/envs/jupyterbook/lib/python3.10/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/Users/melvindalhuisen/anaconda3/envs/jupyterbook/lib/python3.10/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Users/melvindalhuisen/anaconda3/envs/jupyterbook/lib/python3.10/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+import matplotlib.colors as mcolors
+
+# Lees het CSV-bestand
+data = pd.read_csv('data.csv')
+
+# Verwijder de kolommen die niet boeien
+columns_to_drop = [
+    'IsLatestYear', 'ValueType', 'Indicator', 'Location type', 'Dim1 type', 
+    'Dim1ValueCode', 'Dim2 type', 'Dim2', 'Dim2ValueCode', 'Dim3ValueCode', 
+    'Dim3 type', 'Dim3', 'DataSourceDimValueCode', 'DataSource', 
+    'FactValueNumericPrefix', 'FactValueUoM', 'FactValueNumericLowPrefix', 
+    'FactValueNumericHighPrefix', 'FactValueTranslationID', 'FactComments', 
+    'Language', 'DateModified', 'IndicatorCode', 'Period type'
+]
+
+data = data.drop(columns=columns_to_drop)
+
+# Filter de data
+data = data[(data['Period'] == 2019) & (data['Dim1'] == 'Total')]
+
+# Maak een nieuwe kolom voor de groepen met stappen van 20
+bins = list(range(0, 101, 20))
+labels = [f'{i}-{i+19}' for i in bins[:-1]]
+data['Group'] = pd.cut(data['FactValueNumeric'], bins=bins, labels=labels, right=False)
+
+# Lees de wereldkaart shapefile
+world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+
+# Merge de data met de wereldkaart
+world = world.merge(data, how='left', left_on='name', right_on='Location')
+
+
+# Definieer een colormap met grotere kleurverschillen
+cmap = mcolors.LinearSegmentedColormap.from_list('green_scale', ['#e0ffe0', '#006400'], N=len(labels))
+
+# Plot de kaart
+fig, ax = plt.subplots(1, 1, figsize=(15, 10))
+world.boundary.plot(ax=ax, linewidth=1)
+world.plot(column='Group', ax=ax, legend=True, cmap=cmap,
+           missing_kwds={"color": "lightgrey"})
+
+# Verwijder de x- en y-assen
+ax.set_axis_off()
+
+# Legenda toevoegen
+legend = ax.get_legend()
+legend.set_bbox_to_anchor((1, 0.5))
+plt.title('PM2.5 concentratie per land')
+plt.show()
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [0;32mIn[2], line 1[0m
+[0;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m
+[1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mgeopandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mgpd[39;00m
+[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplt[39;00m
+
+[0;31mModuleNotFoundError[0m: No module named 'pandas'
+
